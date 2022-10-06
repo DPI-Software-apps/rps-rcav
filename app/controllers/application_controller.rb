@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
   def play_rock
      @some_number = rand(1000)
 
+     #redirect_to (URL's)
+
      render({ :template => "game_template/rock.html.erb"})
-
-
   end
 end
