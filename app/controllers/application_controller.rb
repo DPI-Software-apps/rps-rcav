@@ -5,15 +5,16 @@ class ApplicationController < ActionController::Base
   # ================================
 
   def play_rock
-     @some_number = rand(1000)
+     #@some_number = rand(1000)
 
      #redirect_to (URL's)
+     redirect_to("https://www.playrock.com")
 
      render({ :template => "game_template/rock.html.erb"})
 
-     render({ :template => "game_template/paper.html.erb"})
+     #render({ :template => "game_template/paper.html.erb"})
 
-     render({ :template => "game_template/scissors.html.erb"})
+     #render({ :template => "game_template/scissors.html.erb"})
      
   end
 end
