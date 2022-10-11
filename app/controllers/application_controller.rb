@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   # Add your actions below this line
   # ================================
   def homepage
-    render({ :template => "game_templates/rules.html.erb"}) 
+    render({ :template => "game_template/rules.html.erb"}) 
   end   
 
   def play_rock
@@ -16,7 +16,18 @@ class ApplicationController < ActionController::Base
      render({ :template => "game_template/rock.html.erb"})
   end
 
-  def play_paper   
+  def play_paper 
+   comp_moves = ["rock","paper","scissors"].smaple
+
+
+   if comp_move == "paper" 
+     outcome = tied
+   elsif come_move == "rock"
+     outcome = lost
+   elsif come_move == "scissors"
+     outcome =  won
+   end 
+   
      render({ :template => "game_template/paper.html.erb"})
   end
 
