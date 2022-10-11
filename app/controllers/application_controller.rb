@@ -26,8 +26,8 @@ class ApplicationController < ActionController::Base
      @outcome = "lost"
    elsif @comp_move == "scissors"
      @outcome = "won"
-   end 
-
+   end
+   
      render({ :template => "game_template/rock.html.erb" })
   end
 
@@ -42,6 +42,7 @@ class ApplicationController < ActionController::Base
    elsif @comp_move == "rock"
      @outcome = "won"
    end 
+
    
      render({ :template => "game_template/paper.html.erb" })
   end
@@ -57,6 +58,7 @@ class ApplicationController < ActionController::Base
    elsif @comp_move == "paper"
      @outcome = "won"
    end 
+   
      render({ :template => "game_template/scissors.html.erb" })
   end   
  end
