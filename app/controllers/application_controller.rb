@@ -9,8 +9,12 @@ class ApplicationController < ActionController::Base
      #redirect_to("https://www.playrock.com")
 
   def homepage
-    render({ :template => "game_template/rules.html.erb"}) 
-  end   
+    render({ :template => "game_template/rules.html.erb" }) 
+  end 
+  
+  def rules
+    render({ :template => "game_template/rules.html.erb" })
+  end
 
   def Play_Rock
      @comp_move = ["rock","paper","scissors"].sample
