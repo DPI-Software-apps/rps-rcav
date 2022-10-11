@@ -18,20 +18,3 @@
 
 
 
-<h2>We played rock!</h2>
-
-<%= moves = ["rock","paper","scissors"].sample %>
-
-<h2>They played <%= comp_move %>!</h2>
-
-<%= index = rand (3) %>
-
-<%= comp_move = moves.at(index) %>
-
-<% if comp_move == "rock" %>
-  <h2>We tied!</h2>
-<% elsif comp_move == "paper" %>
-  <h2>We lost!</h2>
-<% elsif comp_move == "scissors" %>
-  <h2>We won!</h2>   
-<% end %>

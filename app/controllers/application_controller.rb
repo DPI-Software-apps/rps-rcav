@@ -12,47 +12,47 @@ class ApplicationController < ActionController::Base
     render({ :template => "game_template/rules.html.erb"}) 
   end   
 
-  def play_rock
+  def Play_Rock
      @comp_move = ["rock","paper","scissors"].sample
 
 
-   if @comp_move == "paper" 
+   if @comp_move == "rock" 
      @outcome = "tied"
-   elsif @comp_move == "rock"
+   elsif @comp_move == "paper"
      @outcome = "lost"
    elsif @comp_move == "scissors"
      @outcome = "won"
    end 
 
-     render({ :template => "game_template/rock.html.erb" :layout =>"wrapper.html.erb" })
+     render({ :template => "game_template/rock.html.erb" })
   end
 
-  def play_paper 
+  def Play_Paper 
    @comp_move = ["rock","paper","scissors"].sample
 
 
    if @comp_move == "paper" 
      @outcome = "tied"
-   elsif @comp_move == "rock"
-     @outcome = "lost"
    elsif @comp_move == "scissors"
+     @outcome = "lost"
+   elsif @comp_move == "rock"
      @outcome = "won"
    end 
    
-     render({ :template => "game_template/paper.html.erb" :layout =>"wrapper.html.erb" })
+     render({ :template => "game_template/paper.html.erb" })
   end
 
-  def play_scissors
+  def Play_Scissors
    @comp_move = ["rock","paper","scissors"].sample
 
 
-   if @comp_move == "paper" 
+   if @comp_move == "scissors" 
      @outcome = "tied"
    elsif @comp_move == "rock"
      @outcome = "lost"
-   elsif @comp_move == "scissors"
+   elsif @comp_move == "paper"
      @outcome = "won"
    end 
-     render({ :template => "game_template/scissors.html.erb" :layout =>"wrapper.html.erb" })
+     render({ :template => "game_template/scissors.html.erb" })
   end   
  end

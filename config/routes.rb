@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
   get("/", { :controller => "application", :action =>"homepage"})
 
-get("/rock", {:controller => "application", :action => "play_rock" })
+get("/rock", {:controller => "application", :action => "Play_Rock" })
 
-get("/paper", {:controller => "application", :action => "play_paper" })
+get("/paper", {:controller => "application", :action => "Play_Paper" })
 
-get("scissors", {:controller => "application", :action => "play_scissors" })
+get("scissors", {:controller => "application", :action => "Play_Scissors" })
 
 end
